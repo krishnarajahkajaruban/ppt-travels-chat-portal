@@ -84,7 +84,7 @@ function App() {
 
   const sendMessage = async (messageDetail) => {
     try {
-      const response = await axios.post('http://localhost:8000/api/query/contact', messageDetail, {
+      const response = await axios.post('https://ppt-travels-chat-portal-production.up.railway.app/api/query/contact', messageDetail, {
         headers: {
           'Content-Type': 'application/json',
         },
