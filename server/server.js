@@ -16,7 +16,7 @@ const app = express();
 
 // Middleware setup
 app.use(cors({ // CORS setup
-  origin: ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002', 'https://travel-tourism-chatbot.onrender.com'],
+  origin: ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002', 'https://ppt-travels-chat-portal.vercel.app'],
   credentials: true,
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Credentials']
