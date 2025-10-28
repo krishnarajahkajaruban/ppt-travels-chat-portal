@@ -20,9 +20,8 @@ function App() {
   const [scrolled, setScrolled] = useState(false);
   const [backToTopActive, setBackToTopActive] = useState(false);
   const chatInputRef = useRef(null);
-
   const [queryResponse, setQueryResponse] = useState([
-    { query: "", response: "Welcome to the P.P.T Travels & Tours. How can I help you today?" }
+    { query: "", response: "Welcome to the P.P.T Travels & Tours. How can I help you today?", isTyping: false }
   ]);
   const [userMessage, setUserMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -94,7 +93,7 @@ function App() {
 
       if (!result.error) {
         console.log(result);
-        showSuccessMessage("Your message is recieved.One of our agent will contact you shortly")
+        showSuccessMessage("Your message is recieved. One of our agent will contact you shortly")
         setCredentials(initialCredentials);
       } else {
         console.log(result);
@@ -232,45 +231,51 @@ function App() {
   /////
 
   const fetchResponseForQuery = async (query) => {
-    let message;
-    if (query) {
-      message = {
-        dbquery: query
-      }
-    } else {
-      message = {
-        query: userMessage
-      }
-    }
-    // setLoadingMessage(true);
-    setQueryResponse([...queryResponse, {
-      query: (query ? query : userMessage), response:
-        <div className="loading-chat">
-          <Skeleton circle={true} height={5} width={5} />
-          <Skeleton circle={true} height={5} width={5} />
-          <Skeleton circle={true} height={5} width={5} />
-          <Skeleton circle={true} height={5} width={5} />
-          <Skeleton circle={true} height={5} width={5} />
-        </div>
-    }]);
+    const userText = query ? query : userMessage;
+
+    setQueryResponse((prev) => [
+      ...prev,
+      { query: userText, response: null, isTyping: true },
+    ]);
+
     try {
+      const message = query ? { dbquery: query } : { query: userMessage };
       const response = await axios.post(`${process.env.REACT_APP_BASEURL}/api/query/find-matching-response`, message);
-      console.log(response.data);
-      setQueryResponse([...queryResponse, { query: (query ? query : userMessage), response: response.data.response }]);
+
+      setQueryResponse((prev) => {
+        const updated = [...prev];
+        const lastIndex = updated.map((m) => m.isTyping).lastIndexOf(true);
+        if (lastIndex !== -1) {
+          updated[lastIndex] = {
+            query: userText,
+            response: response.data.response,
+            isTyping: false,
+          };
+        }
+        return updated;
+      });
     } catch (err) {
-      console.log(err);
-      setErrorMessage(err.response.data.error);
-      setQueryResponse([...queryResponse, { query: (query ? query : userMessage), response: "Error, Something went wrong...." }]);
+      setErrorMessage(err.response?.data?.error || "Something went wrong");
+
+      setQueryResponse((prev) => {
+        const updated = [...prev];
+        const lastIndex = updated.map((m) => m.isTyping).lastIndexOf(true);
+        if (lastIndex !== -1) {
+          updated[lastIndex] = {
+            query: userText,
+            response: "Error, Something went wrong....",
+            isTyping: false,
+          };
+        }
+        return updated;
+      });
     } finally {
       setUserMessage("");
-      // setSelectedQuery("");
       setQueries([]);
-      // setLoadingMessage(false);
     }
   }
 
   const handleChange = async (e) => {
-
     setUserMessage(e.target.value);
     setErrorMessage("");
 
@@ -464,38 +469,46 @@ function App() {
                 </div>
 
                 <ScrollToBottom className="card-body chatting-card-body">
-                  {queryResponse.length > 0 &&
-                    queryResponse.map((qr, index) => {
-                      return (
-                        <>
-                          {qr.query && (
-                            <div className="chat--message-container send"
-                              key={index}>
-                              <div className="chat--message-area">
-                                <div className="chat-message-content">
-                                  <p>{qr?.query}</p>
-                                </div>
+                  {queryResponse.length > 0 && queryResponse.map((qr, index) => {
+                    return (
+                      <>
+                        {qr.query && (
+                          <div className="chat--message-container send"
+                            key={`send_${index}`}>
+                            <div className="chat--message-area">
+                              <div className="chat-message-content">
+                                <p>{qr?.query}</p>
                               </div>
-                              <img src={human_avatar} alt="Human Avatar" className='chat-avatar' />
                             </div>
-                          )}
+                            <img src={human_avatar} alt="Human Avatar" className='chat-avatar' />
+                          </div>
+                        )}
 
-                          {qr.response &&
-                            <div className="chat--message-container receive"
-                              key={index}>
-                              <div className="chat--message-area">
-                                <div className="chat-message-content">
-                                  <p dangerouslySetInnerHTML={{ __html: qr?.response }}/>
+                        <div className="chat--message-container receive" key={`receive_${index}`}>
+                          <div className="chat--message-area">
+                            <div className="chat-message-content">
+                              {qr.isTyping ? (
+                                <div className="typing-indicator">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
                                 </div>
-                              </div>
-                              <img src={bot_avatar} alt="Bot Avatar"
-                                className='chat-avatar' />
+                              ) : qr?.response ? (
+                                <p dangerouslySetInnerHTML={{ __html: qr?.response }} />
+                              ) : null}
                             </div>
-                          }
-                        </>
+                          </div>
 
-                      );
-                    })}
+                          <img
+                            src={bot_avatar}
+                            alt="Bot Avatar"
+                            className='chat-avatar'
+                          />
+                        </div>
+                      </>
+                    );
+                  })}
+
                 </ScrollToBottom>
 
                 <div className="card-footer chatting-card-footer">
