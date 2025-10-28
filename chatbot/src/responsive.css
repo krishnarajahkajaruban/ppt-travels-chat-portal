@@ -1,0 +1,890 @@
+/* For XXL Screen (768p(1366 x 768) above - 1080p , 1920 x 1080) */
+@media (min-width: 1399.99px) {}
+
+/* For XL Screen (Laptop - HD Ready Display) */
+@media only screen and (min-width: 1199.9px) and (max-width: 1399.98px) {
+
+    .hero-container h2,
+    .hero-container h2 span {
+        font-size: 42px;
+    }
+
+    .hero-container .hero-sub-title {
+        font-size: 22px !important;
+    }
+
+    .section-padding {
+        padding: 100px 0;
+    }
+
+    .section-heading {
+        font-size: 30px;
+    }
+
+    .hero-container {
+        margin-top: 20px;
+        height: calc(85vh - 20px);
+    }
+
+    /*  */
+    .achievment-area .achievment-count {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .achievment-area .achievment {
+        font-size: 16px;
+    }
+
+    .section-para {
+        font-size: 14px;
+    }
+
+    .goto-link-btn-area {
+        margin-top: 40px;
+    }
+
+    .go-to-link-btn {
+        font-size: 14px;
+    }
+
+
+    .service-desc {
+        font-size: 14px;
+    }
+
+    .service-title {
+        color: #e1342e;
+        font-size: 18px;
+    }
+
+    .service-content-container {
+        margin-top: 40px;
+    }
+
+    /*  */
+    .contact-content .contact-link {
+        font-size: 15px !important;
+    }
+
+    .contact-content .contact-icon-area {
+        width: 35px;
+        height: 35px;
+    }
+
+    .contact-content .contact-icon-area i {
+        font-size: 18px;
+    }
+
+    .form-desc {
+        font-size: 14px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .custom-label {
+        font-size: 14px !important;
+    }
+
+    .custom-form-input {
+        padding: 12px 15px !important;
+        font-size: 14px !important;
+    }
+
+    .form-button {
+        font-size: 14px !important;
+    }
+
+    /*  */
+    .footer-content-container .footer-logo-link img {
+        width: 45px;
+    }
+
+    .footer-content-container .footer-logo-link {
+        font-size: 22px;
+    }
+
+    .footer-desc {
+        font-size: 14px;
+    }
+
+    .footer-section {
+        padding-top: 60px;
+    }
+
+    .sub-footer {
+        margin-top: 20px;
+    }
+
+    .sub-footer p {
+        font-size: 13px;
+    }
+
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+    }
+
+    /*  */
+
+    .chat-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chat-message-content p {
+        font-size: 13px !important;
+    }
+}
+
+/* For LG (Large) Screen  */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .header-area nav .logo-link img {
+        width: 45px;
+    }
+
+    .header-area nav .logo-link {
+        font-size: 22px;
+    }
+
+    .hero-container h2,
+    .hero-container h2 span {
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    .hero-container .hero-sub-title {
+        font-size: 20px !important;
+    }
+
+    .hero-container .hero-desc {
+        font-size: 14px;
+    }
+
+    .section-padding {
+        padding: 100px 0;
+    }
+
+    .section-heading {
+        font-size: 30px;
+    }
+
+    .hero-container {
+        margin-top: 15px;
+        height: calc(86vh - 20px);
+    }
+
+    .about-img {
+        width: 70% !important;
+        margin-left: auto;
+        display: block;
+        position: relative;
+        padding-top: 30px;
+    }
+
+    /*  */
+    .achievment-area .achievment-count {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .achievment-area .achievment {
+        font-size: 16px;
+    }
+
+    .achievment-section {
+        padding: 80px 0 !important;
+    }
+
+    .section-para {
+        font-size: 14px;
+    }
+
+    .goto-link-btn-area {
+        margin-top: 30px;
+    }
+
+    .go-to-link-btn {
+        font-size: 14px;
+    }
+
+    .service-desc {
+        font-size: 14px;
+    }
+
+    .service-title {
+        color: #e1342e;
+        font-size: 18px;
+    }
+
+    .service-content-container {
+        margin-top: 40px;
+    }
+
+    /*  */
+    .contact-content .contact-link {
+        font-size: 15px !important;
+    }
+
+    .contact-content .contact-icon-area {
+        width: 35px;
+        height: 35px;
+    }
+
+    .contact-content .contact-icon-area i {
+        font-size: 18px;
+    }
+
+    .form-desc {
+        font-size: 14px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .custom-label {
+        font-size: 14px !important;
+    }
+
+    .custom-form-input {
+        padding: 12px 15px !important;
+        font-size: 14px !important;
+    }
+
+    .form-button {
+        font-size: 14px !important;
+    }
+
+    /*  */
+    .footer-content-container .footer-logo-link img {
+        width: 45px;
+    }
+
+    .footer-content-container .footer-logo-link {
+        font-size: 22px;
+    }
+
+    .footer-desc {
+        font-size: 14px;
+    }
+
+    .footer-section {
+        padding-top: 60px;
+    }
+
+    .sub-footer {
+        margin-top: 20px;
+    }
+
+    .sub-footer p {
+        font-size: 13px;
+    }
+
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+    }
+
+    /*  */
+    .chat-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chat-message-content p {
+        font-size: 13px !important;
+    }
+}
+
+/* For MD (Medium) Screen (ipad) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header-area nav .nav-section {
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .header-area nav .logo-link img {
+        width: 45px;
+    }
+
+    .header-area nav .logo-link {
+        font-size: 22px;
+    }
+
+    .hero-container h2,
+    .hero-container h2 span {
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    .hero-container .hero-sub-title {
+        font-size: 20px !important;
+    }
+
+    .hero-container .hero-desc {
+        font-size: 14px;
+    }
+
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    .section-heading {
+        font-size: 30px;
+    }
+
+    .hero-container {
+        margin-top: 80px;
+        height: calc(84vh - 20px);
+        padding: 0px 20px;
+    }
+
+    .about-img {
+        width: 80% !important;
+        margin-left: auto;
+        display: block;
+        position: relative;
+        padding-top: 30px;
+    }
+
+    /*  */
+    .achievment-area .achievment-count {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .achievment-area .achievment {
+        font-size: 16px;
+    }
+
+    .achievment-section {
+        padding: 80px 0 !important;
+        margin-right: 30px;
+    }
+
+    .section-para {
+        font-size: 14px;
+    }
+
+    .goto-link-btn-area {
+        margin-top: 40px;
+    }
+
+    .go-to-link-btn {
+        font-size: 14px;
+    }
+
+    .chat--card {
+        margin-top: 60px;
+    }
+
+    .service-desc {
+        font-size: 14px;
+    }
+
+    .service-title {
+        color: #e1342e;
+        font-size: 18px;
+    }
+
+    .service-content-container {
+        margin-top: 40px;
+    }
+
+    /*  */
+
+    .contact-content .contact-link {
+        font-size: 15px !important;
+    }
+
+    .contact-content .contact-icon-area {
+        width: 35px;
+        height: 35px;
+    }
+
+    .contact-content .contact-icon-area i {
+        font-size: 18px;
+    }
+
+    .form-desc {
+        font-size: 14px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .custom-label {
+        font-size: 14px !important;
+    }
+
+    .custom-form-input {
+        padding: 12px 15px !important;
+        font-size: 14px !important;
+    }
+
+    .form-button {
+        font-size: 14px !important;
+    }
+
+    .contact-form-container {
+        margin-top: 40px;
+        height: auto !important;
+    }
+
+    /*  */
+
+    .footer-content-container .footer-logo-link img {
+        width: 45px;
+    }
+
+    .footer-content-container .footer-logo-link {
+        font-size: 22px;
+    }
+
+    .footer-desc {
+        font-size: 14px;
+    }
+
+    .footer-section {
+        padding-top: 60px;
+    }
+
+    .sub-footer {
+        margin-top: 20px;
+    }
+
+    .sub-footer p {
+        font-size: 13px;
+    }
+
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+    }
+
+    /*  */
+}
+
+/* For SM (Small) Screen (Tab) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .header-area nav .nav-section {
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .header-area nav .logo-link img {
+        width: 45px;
+    }
+
+    .header-area nav .logo-link {
+        font-size: 22px;
+    }
+
+    .hero-container h2,
+    .hero-container h2 span {
+        font-size: 40px;
+        line-height: 46px;
+        text-align: center;
+    }
+
+    .hero-container .hero-sub-title {
+        font-size: 20px !important;
+        text-align: center;
+    }
+
+    .hero-container .hero-desc {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    .section-heading {
+        font-size: 30px;
+    }
+
+    .hero-container {
+        margin-top: 80px;
+        height: calc(86vh - 20px);
+    }
+
+    .about-img {
+        margin-top: 30px;
+    }
+
+    /*  */
+    .achievment-area .achievment-count {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .achievment-area .achievment {
+        font-size: 16px;
+    }
+
+    .achievment-section {
+        padding: 80px 0 !important;
+        margin-right: 30px;
+    }
+
+    .section-para {
+        font-size: 14px;
+    }
+
+    .goto-link-btn-area {
+        margin-top: 40px;
+    }
+
+    .go-to-link-btn {
+        font-size: 14px;
+    }
+
+    .chat--card {
+        margin-top: 40px;
+    }
+
+    .service-desc {
+        font-size: 14px;
+    }
+
+    .service-title {
+        color: #e1342e;
+        font-size: 18px;
+    }
+
+    .service-content-container {
+        margin-top: 40px;
+    }
+
+    /*  */
+    .contact-content .contact-link {
+        font-size: 15px !important;
+    }
+
+    .contact-content .contact-icon-area {
+        width: 35px;
+        height: 35px;
+    }
+
+    .contact-content .contact-icon-area i {
+        font-size: 18px;
+    }
+
+    .form-desc {
+        font-size: 14px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .custom-label {
+        font-size: 14px !important;
+    }
+
+    .custom-form-input {
+        padding: 12px 15px !important;
+        font-size: 14px !important;
+    }
+
+    .form-button {
+        font-size: 14px !important;
+    }
+
+    .contact-form-container {
+        margin-top: 40px;
+        height: auto !important;
+    }
+
+    /*  */
+    .footer-content-container .footer-logo-link img {
+        width: 45px;
+    }
+
+    .footer-content-container .footer-logo-link {
+        font-size: 22px;
+    }
+
+    .footer-desc {
+        font-size: 14px;
+    }
+
+    .footer-section {
+        padding-top: 60px;
+    }
+
+    .sub-footer {
+        margin-top: 20px;
+    }
+
+    .sub-footer p {
+        font-size: 13px;
+    }
+
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+    }
+
+    /*  */
+}
+
+/* For Mobile Screen */
+@media (max-width: 575px) {
+    .header-area {
+        width: 98%;
+    }
+
+    .header-area nav .nav-section {
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-link-area li .nav-link {
+        font-size: 14px;
+    }
+
+    .nav-link-area {
+        gap: 30px;
+    }
+
+    .header-area nav .logo-link img {
+        width: 40px;
+    }
+
+    .header-area nav .logo-link {
+        font-size: 22px;
+    }
+
+    .hero-container h2,
+    .hero-container h2 span {
+        font-size: 35px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .hero-container .hero-sub-title {
+        font-size: 18px !important;
+        text-align: center;
+    }
+
+    .hero-container .hero-desc {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .hero-container .hero-desc.paragraph-2 {
+        display: none;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .section-heading {
+        font-size: 25px;
+    }
+
+    .hero-section,
+    .hero-container {
+        border-bottom-right-radius: 100px;
+    }
+
+
+    .hero-container {
+        margin-top: 75px;
+        height: calc(86vh - 20px);
+        padding: 0 10px;
+    }
+
+    .section-label,
+    .section-heading {
+        text-align: center;
+    }
+
+    .section-para {
+        text-align-last: center;
+        font-size: 14px;
+    }
+
+    .about-img {
+        width: 95%;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .about-us-container {
+        padding: 0 10px;
+    }
+
+    .section-label {
+        font-size: 13px;
+    }
+
+    /*  */
+    .achievment-section {
+        border-radius: 0 100px 100px 0;
+        margin-right: 20px;
+        padding: 60px 0 !important;
+    }
+
+    .achievment-area .achievment-count {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .achievment-area .achievment {
+        font-size: 16px;
+    }
+
+    /*  */
+
+    .goto-link-btn-area {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .go-to-link-btn {
+        font-size: 14px;
+    }
+
+    .chat--card {
+        margin-top: 40px;
+    }
+
+    .chat-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chat--message-container .chat-message-content {
+        max-width: 270px;
+    }
+
+    .service-desc {
+        font-size: 14px;
+    }
+
+    .service-title {
+        color: #e1342e;
+        font-size: 16px;
+    }
+
+    .service-content-container {
+        margin-top: 20px;
+    }
+
+    .section-center-label {
+        font-size: 13px;
+    }
+
+    .services-container {
+        padding: 0 10px;
+    }
+
+    /*  */
+    .contact-content .contact-link {
+        font-size: 15px !important;
+    }
+
+    .contact-content .contact-icon-area {
+        width: 35px;
+        height: 35px;
+    }
+
+    .contact-content .contact-icon-area i {
+        font-size: 18px;
+    }
+
+    .form-desc {
+        font-size: 14px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .custom-label {
+        font-size: 14px !important;
+    }
+
+    .custom-form-input {
+        padding: 12px 15px !important;
+        font-size: 14px !important;
+    }
+
+    .form-button {
+        font-size: 14px !important;
+    }
+
+    .contact-form-container {
+        margin-top: 20px;
+        height: auto !important;
+        padding: 30px;
+    }
+
+    .contact-content-container h6,
+    .contact-content-container p {
+        padding: 0 10px;
+    }
+
+
+    /*  */
+
+    .footer-content-container .footer-logo-link img {
+        width: 40px;
+    }
+
+    .footer-content-container .footer-logo-link {
+        font-size: 20px;
+    }
+
+    .footer-desc {
+        font-size: 14px;
+    }
+
+    .footer-section {
+        padding-top: 40px;
+        border-top-left-radius: 65px;
+        border-top-right-radius: 65px;
+    }
+
+    .sub-footer {
+        margin-top: 20px;
+    }
+
+    .sub-footer p {
+        font-size: 12px;
+    }
+
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        right: 15px;
+    }
+
+    .back-to-top.active {
+        bottom: 15px;
+    }
+
+    .back-to-top i {
+        font-size: 22px;
+    }
+
+    /*  */
+}
